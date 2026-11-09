@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library - Authors & Categories</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="nav"></header>
+  <main>
+    <div id="msg"></div>
+    <div class="two">
+      <div class="card">
+        <h2>Authors</h2>
+        <form id="authorForm">
+          <label for="aName">Name</label><input id="aName" required minlength="2">
+          <label for="aBio">Bio (optional)</label><textarea id="aBio" rows="2"></textarea>
+          <p><button type="submit">Add author</button></p>
+        </form>
+        <div id="authors"></div>
+      </div>
+      <div class="card">
+        <h2>Categories</h2>
+        <form id="categoryForm">
+          <label for="cName">Name</label><input id="cName" required minlength="2">
+          <p><button type="submit">Add category</button></p>
+        </form>
+        <div id="categories"></div>
+      </div>
+    </div>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

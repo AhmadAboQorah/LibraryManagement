@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="nav"></header>
+  <main>
+    <div class="auth-box card">
+      <h1>📚 Library</h1>
+      <div class="tabs">
+        <button id="tabLogin" class="active" type="button">Login</button>
+        <button id="tabRegister" type="button">Register</button>
+      </div>
+      <div id="msg"></div>
+
+      <form id="loginForm">
+        <label for="lEmail">Email</label>
+        <input id="lEmail" type="email" required autocomplete="username">
+        <label for="lPassword">Password</label>
+        <input id="lPassword" type="password" required autocomplete="current-password">
+        <p><button type="submit">Login</button></p>
+      </form>
+
+      <form id="registerForm" hidden>
+        <label for="rName">Full name</label>
+        <input id="rName" type="text" required minlength="2">
+        <label for="rEmail">Email</label>
+        <input id="rEmail" type="email" required autocomplete="username">
+        <label for="rPassword">Password (min 6 characters)</label>
+        <input id="rPassword" type="password" required minlength="6" autocomplete="new-password">
+        <p><button type="submit">Create account</button></p>
+      </form>
+    </div>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

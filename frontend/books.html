@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library - Books</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="nav"></header>
+  <main>
+    <div id="msg"></div>
+    <div class="card">
+      <div class="row">
+        <div><label for="search">Search by title</label><input id="search" type="search" placeholder="e.g. Clean"></div>
+        <div><label for="categoryFilter">Category</label>
+          <select id="categoryFilter"><option value="">All categories</option></select></div>
+        <button id="searchBtn" type="button">Search</button>
+        <button id="resetBtn" type="button" class="secondary">Reset</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="toolbar">
+        <h2 style="margin:0">Books</h2>
+        <button id="addBtn" type="button" hidden>+ Add book</button>
+      </div>
+      <div id="list"></div>
+    </div>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
