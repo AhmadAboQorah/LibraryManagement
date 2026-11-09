@@ -1,0 +1,44 @@
+erDiagram
+    USERS {
+        int Id PK
+        string FullName
+        string Email UK
+        string PasswordHash
+        string Role "Admin or User"
+    }
+    CATEGORIES {
+        int Id PK
+        string Name UK
+    }
+    AUTHORS {
+        int Id PK
+        string Name
+        string Bio
+    }
+    BOOKS {
+        int Id PK
+        string Title
+        string ISBN UK
+        int PublishYear
+        int TotalCopies
+        int AvailableCopies
+        int CategoryId FK
+        binary RowVersion
+    }
+    BOOKAUTHORS {
+        int BookId PK, FK
+        int AuthorId PK, FK
+    }
+    LOANS {
+        int Id PK
+        int BookId FK
+        int UserId FK
+        datetime LoanDate
+        datetime DueDate
+        datetime ReturnDate "null = not returned"
+    }
+    CATEGORIES ||--o{ BOOKS : "has"
+    BOOKS ||--o{ BOOKAUTHORS : "written by"
+    AUTHORS ||--o{ BOOKAUTHORS : "writes"
+    USERS ||--o{ LOANS : "borrows"
+    BOOKS ||--o{ LOANS : "is borrowed in"
